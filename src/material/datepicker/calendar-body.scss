@@ -61,13 +61,13 @@ $mat-calendar-body-cell-content-size: 100% - $mat-calendar-body-cell-content-mar
   // Choosing a value clearly larger than the height ensures we get the correct capsule shape.
   border-radius: 999px;
 
-  @include cdk-high-contrast(active, off) {
+  @include cdk-high-contrast {
     border: none;
   }
 }
 
 
-@include cdk-high-contrast(active, off) {
+@include cdk-high-contrast {
   .mat-datepicker-popup:not(:empty),
   .mat-calendar-body-selected {
     outline: solid 1px;

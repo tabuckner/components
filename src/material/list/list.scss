@@ -304,7 +304,7 @@ mat-action-list {
   pointer-events: none;
 }
 
-@include cdk-high-contrast(active, off) {
+@include cdk-high-contrast {
   .mat-selection-list:focus {
     outline-style: dotted;
   }

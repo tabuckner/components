@@ -14,10 +14,8 @@ import {
   EventEmitter,
   Input,
   Output,
-  ViewEncapsulation,
-  AfterContentInit
+  ViewEncapsulation
 } from '@angular/core';
-import {chipCssClasses} from '@material/chips';
 import {take} from 'rxjs/operators';
 import {MatChip} from './chip';
 
@@ -63,7 +61,7 @@ export class MatChipSelectionChange {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MatChipOption extends MatChip implements AfterContentInit {
+export class MatChipOption extends MatChip {
 
   /** Whether the chip list is selectable. */
   chipListSelectable: boolean = true;
@@ -117,14 +115,6 @@ export class MatChipOption extends MatChip implements AfterContentInit {
   /** Emitted when the chip is selected or deselected. */
   @Output() readonly selectionChange: EventEmitter<MatChipSelectionChange> =
       new EventEmitter<MatChipSelectionChange>();
-
-  ngAfterContentInit() {
-    super.ngAfterContentInit();
-
-    if (this.selected && this.leadingIcon) {
-      this.leadingIcon.setClass(chipCssClasses.HIDDEN_LEADING_ICON, true);
-    }
-  }
 
   /** Selects the chip. */
   select(): void {

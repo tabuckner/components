@@ -22,7 +22,7 @@ $mat-toolbar-height-mobile-landscape: 48px !default;
 }
 
 .mat-toolbar {
-  @include cdk-high-contrast(active, off) {
+  @include cdk-high-contrast {
     outline: solid 1px;
   }
 }

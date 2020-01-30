@@ -55,7 +55,7 @@
 }
 
 
-@include cdk-high-contrast(active, off) {
+@include cdk-high-contrast {
   .mat-mdc-slide-toggle-focused {
     .mdc-switch__track {
       // Usually 1px would be enough, but MDC reduces the opacity on the
